@@ -10,41 +10,66 @@ body {
 }
 
 .quiz-container {
-    background: white;
-    padding: 40px; /* Increased padding for more breathing room */
-    border-radius: 10px; /* Slightly rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft box shadow */
-    max-width: 800px; /* Increased max-width for larger screens */
-    width: 90%; /* Responsive width */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 90%;
     text-align: center;
-    transition: transform 0.3s ease; /* Smooth transition for hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .quiz-container:hover {
-    transform: translateY(-5px); /* Lift container on hover for a subtle effect */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    margin-bottom: 30px; /* Increased bottom margin for heading */
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease;
+    font-size: 24px;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 12px 24px; /* Slightly increased padding */
-    font-size: 18px; /* Slightly larger font size */
-    cursor: pointer;
+.quiz-container:hover h1 {
+    color: #ff7e5f;
+}
+
+.question {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease;
+}
+
+.quiz-container:hover .question {
+    color: #ffffff;
+}
+
+.answers {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.answer-option {
+    background-color: #ffffff;
+    color: #333333;
+    border: 2px solid #cccccc;
+    padding: 12px 24px;
+    margin: 0 10px;
+    font-size: 18px;
     border-radius: 5px;
-    transition: background-color 0.3s ease; /* Smooth background transition */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #45a049;
+.answer-option:hover {
+    background-color: #ff7e5f;
+    color: #ffffff;
+    border-color: #ff7e5f;
 }
 
-#results {
-    margin-top: 30px; /* Increased top margin */
-    font-size: 20px; /* Slightly larger font size */
-    font-weight: bold; /* Make results text bold */
-}
